@@ -141,10 +141,15 @@
 .header__branding .header__logo h1{
     font-size: 3rem;
     font-weight: 700;
+    color: #656565;
 }
 
 .header__branding .header__nav ul li a{
     color: #656565;
+}
+.header__branding .header__nav ul li a:hover{
+  text-decoration: underline;
+  color: #d99649;
 }
 
 
@@ -158,10 +163,12 @@
     display: flex;
     align-items: center;
     padding: 2rem;
+    justify-content:space-between;
 }
 
 .banner__content .banner__img{
     margin-right: -35rem;
+    
 }
 
 .banner__content .banner__text h5{
@@ -194,6 +201,28 @@
     padding: 2rem 5rem 2rem 5rem;
     color: #fff;
     font-weight: 600;
+}
+@media screen and (max-width:500px){
+  .banner .banner__content{
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .banner__content .banner__text h1{
+    width: 44rem;
+    text-align: center;
+  }
+  .banner__content .banner__text p{
+    width: 43rem;
+  }
+  .banner__content .btn{
+    margin-bottom: 2rem;
+  }
+  .banner__content .banner__img img{
+    width: 80vw;
+    margin-right: 35rem;
+  }
 }
 
 
@@ -268,6 +297,23 @@
   text-align: center;
   color: #656565;
 }
+@media screen and (max-width:500px){
+  .recipes h1{
+    font-size: 2.5rem;
+  }
+  .recipes__grid{
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  .recipes__grid .recipes__grid__content img{
+    width: 50rem;
+    margin-bottom: 1rem;
+  }
+  .recipes__grid .recipes__grid__text p{
+    margin-bottom: 2rem;
+  }
+}
 
 /* collection */
 
@@ -339,6 +385,29 @@
   color: #fff;
   padding: 2rem 5rem 2rem 5rem;
 }
+@media screen and (max-width:500px){
+  .collection h1{
+    font-size: 2.5rem;
+  }
+  .collection__content .collection__content__items{
+    display: flex;
+    flex-direction: column;
+  }
+  .collection__content .collection__content__items:nth-child(2){
+    flex-direction: column-reverse
+  }
+  .collection__content__items .collection__content__items__text{
+    text-align: center;
+    margin: 0 1rem;
+  }
+  .collection__content__items .collection__content__items__text p{
+    margin: 0 1rem;
+  }
+  .collection__content__items img{
+    margin-bottom: -9rem;
+  }
+  
+}
 
 /* newsletter */
 
@@ -393,6 +462,21 @@
   resize: none;
   height: 2.9vw;
 }
+
+@media screen and (max-width:500px){
+  .newsletter .newsletter__text h1{
+    margin-top: 5rem;
+    font-size: 3.5rem;
+  }
+  .newsletter .newsletter__text p{
+    font-size: 2rem;
+  }
+  .subscribe .submit textarea{
+    height: 4.3rem;
+  }
+}
+
+
 
 /* classic */
 
@@ -458,6 +542,9 @@
   color: #656565;
   font-size: 1.5rem;
 }
+.classic__grid__text a:hover{
+  text-decoration: underline;
+}
 
 .classic__ul ul li{
   color: #d99649;
@@ -466,6 +553,30 @@
 
 .classic__ul ul{
   display: flex
+}
+
+@media screen and (max-width:500px){
+  .classic h1{
+    font-size: 3rem;
+  }
+  .classic__grid{
+    display: flex;
+    flex-direction: column;
+  }
+  .classic__grid .classic__grid__content{
+    margin-bottom: 2rem;
+    justify-content: center; 
+  }
+  .classic__grid .classic__grid__content img{
+    width: 25rem;
+    height: 23rem;
+  }
+  .classic__grid__content .classic__grid__text h2{
+    width: 14rem;
+  }
+  .classic__grid__content .classic__grid__text h5{
+    letter-spacing: .5rem;
+  }
 }
 
 /* footer */
@@ -492,10 +603,17 @@
   color: #656565;
 }
 
+.footer__ul ul li a:hover{
+text-decoration: underline;
+color: #d99649;
+}
+
 .footer__content p{
   color: #656565;
   margin-bottom: 5rem;
 }
+
+
 
 /* ABOUT */
 
@@ -526,6 +644,9 @@
 
 .info{
   margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .info__content h1{
@@ -536,12 +657,14 @@
 
 .info__content h6{
   color: #656565;
+  font-size: 1.8rem;
 }
 
 .info__content p{
   margin-bottom: 2rem;
   font-size: 2rem;
   color: #656565;
+  width: 70rem;
 }
 
 .info__content__title h2{
@@ -553,14 +676,16 @@
 }
 
 .info__grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 25rem;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  
 }
 
 .info__content__items{
   display: flex;
-  gap: 2rem
+  gap: 2rem;
+  
 }
 
 .info__content__items img{
@@ -570,6 +695,7 @@
 
 .info__content__text{
   align-items: center;
+  
 }
 
 .info__content__text h5{
@@ -599,7 +725,39 @@
 .info__content__text a{
   color: #656565;
   font-size: 1.5rem;
-  
+}
+.info__content__text a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width:500px){
+  .info__grid{
+    display: flex;
+    flex-direction: column;
+  }
+  .info__content h1{
+    text-align: center;
+  }
+  .info__content p{
+    width: 44rem;
+    text-align: justify;
+    margin: 1rem 1rem;
+  }
+  .info__content h6{
+    margin: 0 1rem;
+  }
+  .info__content .info__content__title h2{
+    text-align: center;
+  }
+  .info__content .info__content__items{
+    justify-content: center;
+    align-items: center;
+  }
+  .info__content .info__content__items img{
+    width: 20rem;
+    height: 20rem;
+  }
+ 
 }
 
 
@@ -609,6 +767,86 @@
   margin-top: 10rem;
 }
 
+.contact__grid__content{
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__grid__content__items h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: #656565;
+  margin-bottom: 2rem;
+}
+
+.contact__grid__content__items p{
+  text-align: justify;
+  width: 40vw;
+  color: #656565;
+}
+
+.contact__grid__content__items .contact__form{
+  margin-top: 2rem;
+  color: #656565;
+}
+
+.contact__grid__content__items .contact__form input{
+  width: 50rem;
+  height: 4rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.contact__grid__content__items .contact__form textarea{
+  resize: none;
+  width: 50rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.contact__info__items{
+  background-color: #d99649;
+  padding: 4rem;
+}
+.contact__info__items{
+  color: #fff;
+}
+.info__text h3{
+  display: flex;
+  gap: 1rem;
+  width: 24rem;
+}
+
+.info__text h5{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:500px){
+  .contact__grid__content{
+    display: block;
+    align-items: center;
+  }
+  .contact__grid__content__items h1{
+    text-align: center;
+  }
+  .contact__grid__content__items p{
+    width: 45rem;
+  }
+  .contact__grid__content__items .contact__form input{
+    width: 45rem;
+  }
+  .contact__grid__content__items .contact__form textarea{
+    width: 45rem;
+  }
+  .contact__grid__content__items .contact__form .submit__btn{
+    margin-bottom: 2rem;
+  }
+  
+}
 
 
 
@@ -645,9 +883,9 @@
 }
 
 .btn.yellow{
- background: #ffa700; 
+ background: #d99649; 
  color: #ffffff;
- border: 1px solid #ffa700; 
+ border: 1px solid #d99649; 
 }
 
 
